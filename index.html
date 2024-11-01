@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vil'aurora - Doces e Salgados</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('fundo.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+        }
+        .container {
+            width: 90%;
+            margin: auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        }
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        header h1 {
+            font-family: 'Georgia', serif;
+            font-size: 2.8em;
+            font-weight: bold;
+            color: #c44d0e;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        header h2 {
+           font-family: 'Arial', sans-serif;
+           font-size: 1.5em;
+           font-weight: normal;
+           color: #666;
+           margin-top: 10px;
+           text-align: center;
+           letter-spacing: 1px;
+    }
+        .menu-sections {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .menu-section {
+            flex: 1 1 30%;
+            margin: 10px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-sizing: border-box;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        .menu-section h2 {
+            font-family: 'Georgia', serif;
+            font-size: 2em;
+            color: #333;
+            margin: 0 0 20px;
+            text-align: center;
+            border-bottom: 2px solid #c44d0e;
+        }
+        .item {
+            margin-bottom: 20px;
+        }
+        .item h3 {
+            font-size: 1.5em;
+            margin: 0;
+            cursor: pointer;
+            color: #c44d0e;
+            transition: color 0.3s;
+        }
+        .item h4 {
+            font-size: 1.2em;
+            margin: 0;
+            cursor: pointer;
+            color: #8b6229;
+            transition: color 0.3s;
+        }
+        .item h3:hover {
+            color: #b34009;
+        }
+        .item-content {
+            display: none;
+            margin-top: 15px;
+            line-height: 1.5;
+            text-align: justify;
+        }
+        .item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        .item p {
+            margin: 0 0 10px;
+            font-size: 1em;
+        }
+        .item .price {
+            font-weight: bold;
+            color: #c44d0e;
+            font-size: 1.2em;
+        }
+        .item .Weight {
+            font-weight: bold;
+            color: #c44d0e;
+            font-size: 1.2em;
+        }
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .menu-section {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Vil'aurora </h1>
+        <h2>Doces e Salgados</h2>
+        </header>
+        
+        <div class="menu-sections">
+            <div class="menu-section">
+                <h2>Bolos Tradicionais</h2>
+                <div class="item">
+                    <h3 onclick="toggleContent(this)">Bolo Mármore</h3>
+                    <div class="item-content">
+                        <img src="bolo2.jpg" alt="Bolo de Chocolate">
+                        <p>O Bolo Mármore é uma delícia visual e gustativa, com massas de baunilha e chocolate entrelaçadas, criando um contraste perfeito entre 
+                            suavidade e intensidade em cada fatia, irresistivelmente fofo e saboroso.</p>
+                        <p class="price">Valor: 10,00€/un</p>
+                        <p class="Weight" style="display: inline;">Peso:</p><p style="display: inline;"> 1,5 Kg (10-15 Pessoas)</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <h3 onclick="toggleContent(this)">Bolo de Cenoura</h3>
+                    <div class="item-content">
+                        <img src="bolo3.jpg" alt="Bolo de Cenoura">
+                        <p>Um bolo de cenoura macio e irresistível, com uma textura aveludada, leve e um sabor doce e suave, coberto com uma camada cremosa 
+                            de chocolate que derrete na boca.</p>
+                            <p class="price">Valor: 30,00€/un</p>
+                            <p class="Weight" style="display: inline;">Peso:</p><p style="display: inline;"> 2 Kg (15-20 Pessoas)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-section">
+                <h2>Bolos de Aniversário</h2>
+                <div class="item">
+                    <h3 onclick="toggleContent(this)">Bolo 10cm</h3>
+                    <div class="item-content">
+                        <img src="bolo1.jpg" alt="Bolo 10cm">
+                        <p>Bolo com recheio de morango.</p>
+                        <p class="price"> 17,00€</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <h3 onclick="toggleContent(this)">Bolo 2andares</h3>
+                    <div class="item-content">
+                        <img src="https://example.com/empada.jpg" alt="Bolo 2andares">
+                        <p>Bolo para 20 pessoas.</p>
+                        <p class="price">28,00€</p>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-section">
+                <h2>Salgados</h2>
+                <div class="item">
+                    <h3 onclick="toggleContent(this)">Rissóis</h3>
+                   <div class="item-content">
+                       <img src="Rissois.png" alt="Rissóis"> 
+                        <p>Rissóis dourados, crocantes por fora e recheados de sabor, são uma explosão de prazer em cada mordida. 
+                            Perfeitos para qualquer ocasião, conquistam o paladar com uma simplicidade irresistível!</p>
+                            <h4 style="padding-left: 20px;" onclick="toggleSubContent(this)">Fritos</h4>
+                            <head>
+                                <meta charset="UTF-8">
+                                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                                <title>Tabela de Infos Rissóis</title>
+                                <style>
+                                    body {
+                                        font-family: Arial, sans-serif;
+                                    }
+                                    table {
+                                        width: 100%;
+                                        font-family: Arial, sans-serif;
+                                        border-collapse: collapse;
+                                        margin-bottom: 20px; /* Adiciona espaçamento abaixo da tabela */
+                                    }
+                                    th, td {
+                                        padding: 8px; /* Ajustado para menos padding vertical */
+                                        text-align: right; /* Alinha os valores à direita */
+                                        vertical-align: middle;
+                                        line-height: 0.8; /* Menor altura da linha */
+                                    }
+                                    td:first-child {
+                                        text-align: left; /* Alinha a primeira coluna à esquerda */
+                                        padding-left: 25px; /* Adiciona um espaçamento interno à esquerda */
+                                        padding-right: 10px; /* Adiciona um espaçamento à direita */
+                                    }
+                                    th {
+                                        background-color: #ffffff;
+                                    }
+                                </style>
+                            </head>
+                            <body>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th>6 un.</th>
+                                            <th>12 un.</th>
+                                            <th>18 un.</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Camarão</td>
+                                            <td>8€</td>
+                                            <td>14€</td>
+                                            <td>20€</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Carne</td>
+                                            <td>8€</td>
+                                            <td>14€</td>
+                                            <td>20€</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Peixe</td>
+                                            <td>8€</td>
+                                            <td>14€</td>
+                                            <td>20€</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Bacalhau</td>
+                                            <td>9€</td>
+                                            <td>16€</td>
+                                            <td>22€</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </body>
+                            </html>
+                            <h4 style="padding-left: 20px;" onclick="toggleSubContent(this)">Congelados</h4>
+                            <head>
+                                <meta charset="UTF-8">
+                                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                                <title>Tabela de Infos Rissóis</title>
+                                <style>
+                                    body {
+                                        font-family: Arial, sans-serif;
+                                    }
+                                    table {
+                                        width: 100%;
+                                        font-family: Arial, sans-serif;
+                                        border-collapse: collapse;
+                                        margin-bottom: 20px; /* Adiciona espaçamento abaixo da tabela */
+                                    }
+                                    th, td {
+                                        padding: 8px; /* Ajustado para menos padding vertical */
+                                        text-align: right; /* Alinha os valores à direita */
+                                        vertical-align: middle;
+                                        line-height: 0.8; /* Menor altura da linha */
+                                    }
+                                    td:first-child {
+                                        text-align: left; /* Alinha a primeira coluna à esquerda */
+                                        padding-left: 25px; /* Adiciona um espaçamento interno à esquerda */
+                                        padding-right: 10px; /* Adiciona um espaçamento à direita */
+                                    }
+                                    th {
+                                        background-color: #ffffff;
+                                    }
+                                </style>
+                            </head>
+                            <body>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th>6 un.</th>
+                                            <th>12 un.</th>
+                                            <th>18 un.</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Camarão</td>
+                                            <td>6€</td>
+                                            <td>10€</td>
+                                            <td>14€</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Carne</td>
+                                            <td>6€</td>
+                                            <td>10€</td>
+                                            <td>14€</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Peixe</td>
+                                            <td>6€</td>
+                                            <td>10€</td>
+                                            <td>14€</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Bacalhau</td>
+                                            <td>7€</td>
+                                            <td>12€</td>
+                                            <td>17€</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </body>
+                            </html>
+                    </div>
+                </div>
+                <div class="item">
+                    <h3 onclick="toggleContent(this)">Empadas</h3>
+                    <div class="item-content">
+                        <img src="empadas.jpg" alt="Empadas"> 
+                        <p>Empadas douradas, com uma massa que derrete na boca e recheios suculentos que surpreendem a cada dentada. 
+                            Um prazer irresistível, onde cada empada é uma viagem única de sabor e tradição!</p>
+                    <h4 style="padding-left: 20px;" onclick="toggleSubContent(this)">Fritos</h4>
+                    <h4 style="padding-left: 20px;" onclick="toggleSubContent(this)">Congelados</h4>
+                    </div>
+                </div>
+                <div class="item">
+                    <h3 onclick="toggleContent(this)">Croquetes</h3>
+                    <div class="item-content">
+                        <img src="croquetes.jpg" alt="Croquetes"> 
+                        <p>Deliciosos por fora, macios por dentro, os croquetes são um prazer crocante que derrete na boca, trazendo uma explosão de
+                            sabor irresistível. Perfeitos para qualquer ocasião, conquistam todos à primeira mordida!</p>
+                    <h4 style="padding-left: 20px;" onclick="toggleSubContent(this)">Fritos</h4>
+                    <h4 style="padding-left: 20px;" onclick="toggleSubContent(this)">Congelados</h4>
+                    </div>
+                </div>
+                <div class="item">
+                    <h3 onclick="toggleContent(this)">Enroladinhos</h3>
+                    <div class="item-content">
+                        <img src="enroladinhos.jpg" alt="Enroladinhos"> 
+                        <p>Descubra o irresistível sabor dos nossos enroladinhos, crocantes por fora e recheados com ingredientes frescos e deliciosos. 
+                            Uma explosão de sabor em cada mordida que vai conquistar seu paladar!</p>
+                    <h4 style="padding-left: 20px;" onclick="toggleSubContent(this)">Fritos</h4>
+                    <h4 style="padding-left: 20px;" onclick="toggleSubContent(this)">Congelados</h4>
+                    </div>
+                </div>
+                <div class="item">
+                    <h3 onclick="toggleContent(this)">Almofadinhas</h3>
+                    <div class="item-content">
+                        <img src="almofadinhas.jpg" alt="Almofadinhas"> 
+                        <p>Experimente nossas almofadinhas, delicadas e recheadas com um toque especial, que derretem na boca. 
+                            Uma combinação perfeita de suavidade e sabor que irá encantar seu paladar a cada mordida!</p>
+                    <h4 style="padding-left: 20px;" onclick="toggleSubContent(this)">Fritos</h4>
+                    <h4 style="padding-left: 20px;" onclick="toggleSubContent(this)">Congelados</h4>
+                    </div>
+                </div>
+                <div class="item">
+                    <h3 onclick="toggleContent(this)">Quiches</h3>
+                    <div class="item-content">
+                        <img src="quiches.jpg" alt="Quiches"> 
+                        <p>Deleite-se com nossas quiches, uma harmonia perfeita de massa crocante e recheios saborosos, que trazem frescor e 
+                            aconchego a cada garfada. Um pedacinho do céu em cada fatia!</p>
+                    <h4 style="padding-left: 20px;" onclick="toggleSubContent(this)">Fritos</h4>
+                    <h4 style="padding-left: 20px;" onclick="toggleSubContent(this)">Congelados</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleContent(element) {
+            // Fechar todos os conteúdos abertos
+            const allItems = document.querySelectorAll('.item-content');
+            allItems.forEach(item => {
+                item.style.display = 'none';
+            });
+
+            // Abrir o conteúdo correspondente ao item clicado
+            const content = element.nextElementSibling;
+            content.style.display = 'block';
+        }
+
+
+        // Função específica para os <h4> que abre/fecha individualmente
+            function toggleSubContent(element) {
+            const content = element.nextElementSibling;
+            if (content.style.display === 'none' || content.style.display === '') {
+                content.style.display = 'block';
+            } else {
+                content.style.display = 'none';
+            }
+        }
+
+    </script>
+
+</body>
+</html>
