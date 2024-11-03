@@ -81,6 +81,13 @@
             color: #8b6229;
             transition: color 0.3s;
         }
+        .item h5 {
+            font-size: 0.8em;
+            margin: 0;
+            cursor: pointer;
+            color: #5a5959;
+            transition: color 0.3s;
+        }
         .item h3:hover {
             color: #b34009;
         }
@@ -803,8 +810,66 @@
                         <img src="quiches.jpg" alt="Quiches"> 
                         <p>Deleite-se com nossas quiches, uma harmonia perfeita de massa crocante e recheios saborosos, que trazem frescor e 
                             aconchego a cada garfada. Um pedacinho do céu em cada fatia!</p>
-                    <h4 style="padding-left: 20px;" onclick="toggleSubContent(this)">Fritos</h4>
-                    <h4 style="padding-left: 20px;" onclick="toggleSubContent(this)">Congelados</h4>
+                    <style>
+                        body {
+                            font-family: Arial, sans-serif;
+                        }
+                        table {
+                            width: 100%;
+                            font-family: Arial, sans-serif;
+                            border-collapse: collapse;
+                            margin-bottom: 20px; /* Adiciona espaçamento abaixo da tabela */
+                        }
+                        th, td {
+                            padding: 8px; /* Ajustado para menos padding vertical */
+                            text-align: right; /* Alinha os valores à direita */
+                            vertical-align: middle;
+                            line-height: 0.8; /* Menor altura da linha */
+                        }
+                        td:first-child {
+                            text-align: left; /* Alinha a primeira coluna à esquerda */
+                            padding-left: 25px; /* Adiciona um espaçamento interno à esquerda */
+                            padding-right: 10px; /* Adiciona um espaçamento à direita */
+                        }
+                        th {
+                            background-color: #ffffff;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <h4>Frango</h4>
+                                    <h5 style="margin-top: 8px; margin-left: -20px;">Cogumelos, Bacon e Queijo</h5>
+                                </td>
+                                <td>18€/un.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h4>Atum</h4>
+                                    <h5 style="margin-top: 8px; margin-left: -20px;">Alho Francês, Ovos e Queijo</h5>
+                                </td>
+                                <td>18€/un.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h4>Bacalhau</h4>
+                                    <h5 style="margin-top: 8px; margin-left: -20px;">Espinafres e Queijo</h5>
+                                </td>
+                                <td>18€/un.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h4>Personalizada por Ti</h4>
+                                    <h5 style="margin-top: 8px; margin-left: -20px;">4 Ingredientes à tua Escolha</h5>
+                                </td>
+                                <td>18€/un.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
                     </div>
                 </div>
             </div>
